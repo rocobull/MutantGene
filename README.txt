@@ -23,7 +23,7 @@ This library was created as an end-of-bachelor project in the course "Cellular a
 (University: Universidade Nova de Lisboa, Faculty: Faculdade de Ciências e Tecnologias (Portugal)).
 
 A special thanks to Professor Ludwig Krippahl for guiding me through this project and giving me advice
-on how to make this library the best it could be in the aount of time given.
+on how to make this library the best it could be in the amount of time given.
 
 
 
