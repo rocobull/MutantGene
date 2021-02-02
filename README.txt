@@ -35,7 +35,7 @@ The functions are divided into 3 steps:
 (the GDC stores open access MAF files - https://portal.gdc.cancer.gov/repository?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.access%22%2C%22value%22%3A%5B%22open%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_format%22%2C%22value%22%3A%5B%22maf%22%5D%7D%7D%5D%7D)
 
 (STEP 2) deals with retrieving the GO IDs associated to each desired gene from
-the selected GOA file (found here - ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/)
+the selected GOA file (Human GOA files can be found here - ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/)
 
 (STEP 3) deals with converting the collected GO IDs into their corresponding
 GO terms using an OBO file (other OBO files can be found here - http://geneontology.org/docs/download-ontology/)
