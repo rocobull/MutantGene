@@ -1,4 +1,4 @@
-----------# MUTANTGENE #----------
+# MutantGene
 
 MutantGene is a Python library containing 13 functions that has as its primary objective the 
 characterization of genes that have suffered mutations detected via alignments of tumour sample
@@ -25,26 +25,32 @@ This library was created as an end-of-bachelor project in the course "Cellular a
 A special thanks to Professor Ludwig Krippahl for guiding me through this project and giving me advice
 on how to make this library the best it could be in the amount of time given.
 
+___
 
-
-----------# Functions #----------
+## Functions
 
 The functions are divided into 3 steps: 
 
-(STEP 1) deals with extracting variant information from the selected MAF file 
-(the GDC stores open access MAF files - https://portal.gdc.cancer.gov/repository?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.access%22%2C%22value%22%3A%5B%22open%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_format%22%2C%22value%22%3A%5B%22maf%22%5D%7D%7D%5D%7D)
+### STEP 1
+Step 1 deals with extracting variant information from the selected MAF file 
+(the GDC stores open access MAF files [here](https://portal.gdc.cancer.gov/repository?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.access%22%2C%22value%22%3A%5B%22open%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_format%22%2C%22value%22%3A%5B%22maf%22%5D%7D%7D%5D%7D))
 
-(STEP 2) deals with retrieving the GO IDs associated to each desired gene from
-the selected GOA file (Human GOA files can be found here - ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/)
+### STEP 2
+Step 2 deals with retrieving the GO IDs associated to each desired gene from
+the selected GOA file (Human GOA files can be found [here](ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/))
 
-(STEP 3) deals with converting the collected GO IDs into their corresponding
-GO terms using an OBO file (other OBO files can be found here - http://geneontology.org/docs/download-ontology/)
+### STEP 3
+Step 3 deals with converting the collected GO IDs into their corresponding
+GO terms using an OBO file (other OBO files can be found [here](http://geneontology.org/docs/download-ontology/))
+
+___
+
+## Documentation
 
 
+### STEP 1
 
-(STEP 1)
-
-# mutation_samples(maf_file, limit = None, start = 0, index_list = [0,34,35,95,93]):
+`mutation_samples(maf_file, limit = None, start = 0, index_list = [0,34,35,95,93])`
 
 - Extract sample information from a MAF file.
     
@@ -62,7 +68,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# maf_index(maf_file):
+` maf_index(maf_file):`
 
 - Index each parameter of a MAF file.
     
@@ -74,9 +80,9 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-(STEP 2)
+### STEP 2
 
-# get_genes(samples, gene_index = 0):
+`get_genes(samples, gene_index = 0):`
 
 - Filter gene names from sample information lists.
     
@@ -89,7 +95,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# all_goa_id(goa_file):
+`all_goa_id(goa_file):`
 
 - Retrieves all genes and corresponding GO IDs from a GOA file.
     
@@ -102,7 +108,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# get_goa_id(genes, id_dict):
+`get_goa_id(genes, id_dict):`
 
 - Obtain the specified genes' GO IDs.
     
@@ -116,9 +122,9 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-(STEP 3)
+### STEP 3
 
-# get_ontologies(obo_file = None):
+`get_ontologies(obo_file = None):`
 
 - Extract all GO IDs and their corresponding GO terms from an OBO file.
     
@@ -131,7 +137,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# id_to_term(gene_ids, all_go_ids):
+`id_to_term(gene_ids, all_go_ids):`
 
 - Get the desired gene's GO terms through their GO IDs.
     
@@ -145,9 +151,9 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-(UNIVERSAL AUXILIARY FUNCTIONS)
+### UNIVERSAL AUXILIARY FUNCTIONS
 
-# filter_list(raw_list, filter_list, include = "y"):
+`filter_list(raw_list, filter_list, include = "y"):`
 
 - Filters a chosen list.
     
@@ -162,7 +168,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# list_to_file(list_to_save, file_name):
+`list_to_file(list_to_save, file_name):`
 
 - Save a list to a file.
     
@@ -175,7 +181,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# file_to_list(file_name, extend = "n"):
+`file_to_list(file_name, extend = "n"):`
 
 - Converts lines in a file to a list.
     
@@ -189,7 +195,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# filter_dict(raw_dict, filter_list, key_value = "k", include = "y"):
+`filter_dict(raw_dict, filter_list, key_value = "k", include = "y"):`
 
 - Filters a chosen dictionary.
     
@@ -206,7 +212,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# dict_to_file(dictionary, file_name):
+`dict_to_file(dictionary, file_name):`
 
 - Saves a dictionary to a file.
     
@@ -220,7 +226,7 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-# file_to_dict(file_name):
+`file_to_dict(file_name):`
 
 - Converts lines in a file to a dictionary.
     
@@ -232,10 +238,6 @@ GO terms using an OBO file (other OBO files can be found here - http://geneontol
 
 
 
-----------# Licence #----------
+# Licence
 
-This library is under the GPL (https://en.wikipedia.org/wiki/GNU_General_Public_License)
-
-
-
-
+This library licenced under [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License).
