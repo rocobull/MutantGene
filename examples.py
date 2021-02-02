@@ -7,8 +7,8 @@ Created on Sun Jul 12 18:59:24 2020
 
 import MutantGene as mg
 
-maf = None #DEFINE THE DIRECTORY OF A MAF FILE
-goa = None #DEFINE THE DIRECTORY OF A GOA FILE
+maf = None #DEFINE THE DIRECTORY OF A MAF FILE (downloadable here - https://portal.gdc.cancer.gov/repository?filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.access%22%2C%22value%22%3A%5B%22open%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22files.data_format%22%2C%22value%22%3A%5B%22maf%22%5D%7D%7D%5D%7D)
+goa = None #DEFINE THE DIRECTORY OF A GOA FILE (downloadable here - ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/)
 
 
 # This file serves to show how each function in this library works and possible ways they interact with each other!
@@ -92,13 +92,13 @@ mg.dict_to_file(cyto_genes, "cyto_genes.txt")
 # the function of the collected gene products. For this we need an OBO file. If no
 # parameter is specified, the function "get_ontologies" will connect to the URL of
 # a general OBO file with the ontologies of all known and used GO IDs/Terms. In 
-# this example, this is what we will use. 
+# this example, this is what we will use.
             
 
 all_terms = mg.get_ontologies()
 mg.dict_to_file(all_terms, "all_terms.txt")
 
-
+# (In case the user wishes to use a more specific OBO file, they can be found here - http://geneontology.org/docs/download-ontology/)
 
 
 # Finally, we will convert the GO IDs of the genes that were selected by using the
