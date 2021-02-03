@@ -37,7 +37,7 @@ Step 1 deals with extracting variant information from the selected MAF file
 
 ### STEP 2
 Step 2 deals with retrieving the GO IDs associated to each desired gene from
-the selected GOA file (Human GOA files can be found [here](ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/))
+the selected GOA file (Human GOA files can be found at ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/HUMAN/)
 
 ### STEP 3
 Step 3 deals with converting the collected GO IDs into their corresponding
